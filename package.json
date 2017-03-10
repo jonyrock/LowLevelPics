@@ -1,5 +1,5 @@
 {
-  "name": "d3vue",
+  "name": "lowlevelpics",
   "version": "1.0.0",
   "description": "An educational with list of Vue.JS vs D3.js examples",
   "author": "Alexey Velikiy [CorpGlory] <twitter.com/corpglory>",
@@ -11,10 +11,7 @@
   },
   "dependencies": {
     "d3": "^4.6.0",
-    "topojson": "^2.2.0",
-    "vue": "^2.1.10",
-    "vue-resource": "^1.2.1",
-    "vue-router": "^2.2.0"
+    "vue": "^2.1.10"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

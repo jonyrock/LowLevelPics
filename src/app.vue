@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <a href='#/'> <h1> D3.js vs Vue.js examples </h1> </a>
-    <h2>{{ $route.name }}</h2>
-    <top-nav />
-    <router-view></router-view>
+    <h1> Low level pics </h1>
+    asdsad
   </div>
 </template>
 
 <script>
 
-import topNav from './components/demos-navigation'
 
 export default {
   name: 'app',
-  components: { topNav }
+  components: {  }
 }
 </script>
 
