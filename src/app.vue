@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1> Low level pics </h1>
-    asdsad
+    <pics />
   </div>
 </template>
 
@@ -10,7 +10,9 @@
 
 export default {
   name: 'app',
-  components: {  }
+  components: {
+    pics: require('./pics/index')
+  }
 }
 </script>
 
