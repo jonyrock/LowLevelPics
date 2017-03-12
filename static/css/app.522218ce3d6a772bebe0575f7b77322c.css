@@ -1,0 +1,26 @@
+
+#app[data-v-5a3e08ce] {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin-top: 30px;
+}
+a[data-v-5a3e08ce] {
+  color: black;
+  text-decoration: none;
+}
+
+.block {
+  fill: none;
+  stroke-width: 1;
+  stroke: black;
+}
+
+.background[data-v-31ec5277] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+/*# sourceMappingURL=app.522218ce3d6a772bebe0575f7b77322c.css.map*/
