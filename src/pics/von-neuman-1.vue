@@ -1,16 +1,12 @@
 <template>
-  <svg
-    width="500" height="300"
-    id="von-neuman-1"
-  >
+  <svg width="500" height="300">
     <g transform="translate(10,10)">
-      <block width="190" height="155" x="0" y="0" />
-      <block width="180" height="70" x="5" y="5" label="Control Unit" />
-      <block width="180" height="70" x="5" y="80" label="CPU" />
-
+      <block width="190" height="155" x="0" y="0">
+        <block width="180" height="70" x="5" y="5" label="Control Unit" />
+        <block width="180" height="70" x="5" y="80" label="CPU" />
+      </block>
       <block width="180" height="70" x="300" y="50" label="Memory" />
     </g>
-
   </svg>
 </template>
 
@@ -22,12 +18,9 @@ export default {
     var width = +svg.attr('width');
     var height = +svg.attr('height');
   },
-  name: 'Von Neumann Architecture - 1'
+  picName: 'Von Neumann Architecture - 1'
 }
 </script>
 
-<style lang='scss'>
-#von-neuman-1 {
-
-}
+<style lang='scss' scoped>
 </style>

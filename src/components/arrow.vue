@@ -1,18 +1,13 @@
 <template>
 
-  <g :transform='translate'>
-    <rect
-      class='background'
-      :width="width"
-      :height="height"
-    ></rect>
-    <text
-      v-if="label" class="label"
-      text-anchor="middle"
-      :x="width / 2"
-      :y="height / 2 + 5"
-    > {{label}} </text>
-    <slot />
+  <g>
+    <line>
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+        </marker>
+      </defs>
+    </line>
   </g>
 
 </template>
