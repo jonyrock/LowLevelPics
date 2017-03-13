@@ -1,0 +1,55 @@
+
+#app[data-v-588a8006] {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin-top: 30px;
+}
+a[data-v-588a8006] {
+  color: black;
+  text-decoration: none;
+}
+
+.monofont {
+  font-family: monospace;
+  font-size: 15px;
+  /*letter-spacing: -2px;*/
+}
+
+.background[data-v-2e0239dc] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+.value[data-v-2e0239dc] {
+  font-size: 16px;
+}
+.bitSeparator[data-v-2e0239dc] {
+  stroke: black;
+  stroke-width: 0.5;
+}
+.bitBigSeparator[data-v-2e0239dc] {
+  stroke: black;
+  stroke-width: 1;
+}
+
+.background[data-v-04c8ffa8] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.background[data-v-4de75103] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.block {
+  fill: none;
+  stroke-width: 1;
+  stroke: black;
+}
+
+/*# sourceMappingURL=app.ac8221e456005c96aa502cdbe097184e.css.map*/
