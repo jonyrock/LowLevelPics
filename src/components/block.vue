@@ -5,6 +5,8 @@
       class='background'
       :width="width"
       :height="height"
+      rx="10"
+      ry="10"
     ></rect>
     <text
       v-if="label" class="label"

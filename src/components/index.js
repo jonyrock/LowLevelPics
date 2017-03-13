@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 import block from './block'
+import dearrow from './dearrow'
 
 Vue.component('block', block);
-
-console.log('asdasd');
+Vue.component('dearrow', dearrow);
