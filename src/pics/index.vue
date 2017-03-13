@@ -8,9 +8,11 @@
     <p2/>
   </picHolder>
 
-  <div style="height: 400px">
+  <picHolder picName="Registers">
+    <p3/>
+  </picHolder>
 
-  </div>
+  <div style="height: 400px"></div>
 
 </div>
 </template>
@@ -20,7 +22,8 @@
 export default {
   components: {
     p1: require('./von-neuman-1'),
-    p2: require('./von-neuman-2/index')
+    p2: require('./von-neuman-2/index'),
+    p3: require('./registers/index')
   }
 
 }
