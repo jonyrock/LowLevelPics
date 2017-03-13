@@ -35,4 +35,8 @@ export default {
   /*letter-spacing: -2px;*/
 }
 
+svg {
+  margin: auto;
+}
+
 </style>
