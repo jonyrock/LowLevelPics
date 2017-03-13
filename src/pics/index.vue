@@ -19,6 +19,10 @@
 
 <script>
 
+import Vue from 'vue';
+
+Vue.component('cpuBase', require('./cpu-base'));
+
 export default {
   components: {
     p1: require('./von-neuman-1'),
