@@ -4,6 +4,9 @@ import Vue from 'vue'
 import app from './app'
 import components from './components/index'
 
+
+Vue.component('picHolder', require('./pic-holder'));
+
 new Vue({
   el: '#app',
   template: '<app/>',

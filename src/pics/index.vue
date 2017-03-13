@@ -1,6 +1,17 @@
 <template>
 <div>
-  <p1/>
+  <picHolder picName="Von Neumann Architecture - 1">
+    <p1/>
+  </picHolder>
+
+  <picHolder picName="Von Neumann Architecture - 2">
+    <p2/>
+  </picHolder>
+
+  <div style="height: 400px">
+
+  </div>
+
 </div>
 </template>
 
@@ -8,16 +19,20 @@
 
 export default {
   components: {
-    p1: require('./von-neuman-1.vue')
+    p1: require('./von-neuman-1'),
+    p2: require('./von-neuman-2/index')
   }
+
 }
 
 </script>
 
 <style lang='scss'>
-.block {
-  fill: none;
-  stroke-width: 1;
-  stroke: black;
+
+.monofont {
+  font-family:monospace;
+  font-size: 15px;
+  /*letter-spacing: -2px;*/
 }
+
 </style>
