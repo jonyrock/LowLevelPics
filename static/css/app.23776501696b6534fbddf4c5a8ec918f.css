@@ -1,0 +1,82 @@
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin-top: 30px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.monofont {
+  font-family: monospace;
+  font-size: 15px;
+  /*letter-spacing: -2px;*/
+}
+table,
+svg {
+  margin: auto;
+}
+table td {
+  vertical-align: top;
+}
+
+text[data-v-31cb10b8] {
+  text-anchor: middle;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+text[data-v-0a2c0dfd] {
+  text-anchor: middle;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.background[data-v-04c8ffa8] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.background[data-v-4de75103] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.background[data-v-36f30c73] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+text[data-v-0892aa36] {
+  font-size: 16px;
+  text-anchor: middle;
+}
+.separator[data-v-0892aa36] {
+  stroke: black;
+  stroke-width: 0.5;
+}
+.bigSeparator[data-v-0892aa36] {
+  stroke: black;
+  stroke-width: 1;
+}
+.background[data-v-0892aa36] {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.block {
+  fill: none;
+  stroke-width: 1;
+  stroke: black;
+}
+
+/*# sourceMappingURL=app.23776501696b6534fbddf4c5a8ec918f.css.map*/
