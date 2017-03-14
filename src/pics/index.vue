@@ -17,7 +17,7 @@
       </td>
       <td>
         <picHolder picName="Registers - Version 2">
-          <p3_1/>
+          <p3_2/>
         </picHolder>
       </td>
     </tr>
@@ -57,6 +57,10 @@ export default {
 table,
 svg {
   margin: auto;
+}
+
+table td {
+  vertical-align: top
 }
 
 </style>

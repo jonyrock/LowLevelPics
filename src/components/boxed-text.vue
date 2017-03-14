@@ -18,7 +18,7 @@
         y1="0" y2="25"
         :x1="letter.x"
         :x2="letter.x"
-        :class="(letter.i == 4) ? 'bigSeparator': 'separator'"
+        :class="(letter.i % 4 == 0) ? 'bigSeparator': 'separator'"
       />
     </g>
 
@@ -32,14 +32,12 @@ export default {
     y: { type: Number, default: 0 },
     value: { type: String }
   },
-  data: function() {
-  },
   computed: {
     translate: function() {
       return `translate(${this.x}, ${this.y})`
     },
     letters: function() {
-      return this.value.split('').map((d,i) => ({
+      return this.value.split('').map((d, i) => ({
         value: d,
         i: i,
         x: i * 20
