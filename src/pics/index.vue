@@ -8,9 +8,20 @@
     <p2/>
   </picHolder>
 
-  <picHolder picName="Registers">
-    <p3/>
-  </picHolder>
+  <table style="width:500px">
+    <tr>
+      <td>
+        <picHolder picName="Registers - Version 1">
+          <p3_1/>
+        </picHolder>
+      </td>
+      <td>
+        <picHolder picName="Registers - Version 2">
+          <p3_1/>
+        </picHolder>
+      </td>
+    </tr>
+  </table>
 
   <div style="height: 400px"></div>
 
@@ -27,7 +38,8 @@ export default {
   components: {
     p1: require('./von-neuman-1'),
     p2: require('./von-neuman-2/index'),
-    p3: require('./registers/index')
+    p3_1: require('./registers/v1'),
+    p3_2: require('./registers/v2')
   }
 
 }
@@ -42,6 +54,7 @@ export default {
   /*letter-spacing: -2px;*/
 }
 
+table,
 svg {
   margin: auto;
 }

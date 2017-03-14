@@ -1,9 +1,6 @@
 import Vue from 'vue';
 
-import block from './block'
-import dearrow from './dearrow'
-import blockTitle from './block-title'
-
-Vue.component('block', block);
-Vue.component('dearrow', dearrow);
-Vue.component('blockTitle', blockTitle);
+Vue.component('block', require('./block'));
+Vue.component('dearrow', require('./dearrow'));
+Vue.component('blockTitle', require('./block-title'));
+Vue.component('boxedText', require('./boxed-text'));

@@ -9,10 +9,7 @@
 <script>
 export default {
   props: {
-    height: {
-      type: Number,
-      default: 185
-    }
+    height: { type: Number, default: 185 }
   }
 }
 </script>
