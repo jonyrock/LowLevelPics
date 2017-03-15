@@ -46,7 +46,6 @@ export default {
     p3_2: require('./registers/v2'),
     p4: require('./reg-stack/index'),
   }
-
 }
 
 </script>
@@ -87,6 +86,10 @@ table {
 
 .nonactive {
   @include elems-colors($nonactive-color);
+}
+
+.active {
+  @include elems-colors($active-color);
 }
 
 </style>
