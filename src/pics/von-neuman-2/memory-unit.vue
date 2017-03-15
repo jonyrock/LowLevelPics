@@ -1,9 +1,3 @@
-<!--
-TODO:
-  * value blocks
-  * mono font value / address
--->
-
 <template>
   <g :transform='translate'>
     <text
@@ -13,17 +7,14 @@ TODO:
       y="19"
     >{{address}}</text>
     <boxedText :x="90" :value="value" />
-
   </g>
-
 </template>
 
 <script>
 
 export default {
   props: [
-    'address',
-    'y', 'value'
+    'address', 'y', 'value'
   ],
   computed: {
     translate: function() {
