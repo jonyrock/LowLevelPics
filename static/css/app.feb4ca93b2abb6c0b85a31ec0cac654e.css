@@ -15,7 +15,6 @@ a {
 .monofont {
   font-family: monospace;
   font-size: 15px;
-  /*letter-spacing: -2px;*/
 }
 table,
 svg {
@@ -23,6 +22,30 @@ svg {
 }
 table td {
   vertical-align: top;
+}
+path,
+text {
+  fill: black;
+}
+line,
+rect {
+  stroke: black;
+}
+.nonactive path,
+.nonactive text {
+  fill: gray;
+}
+.nonactive line,
+.nonactive rect {
+  stroke: gray;
+}
+.active path,
+.active text {
+  fill: black;
+}
+.active line,
+.active rect {
+  stroke: black;
 }
 
 text[data-v-31cb10b8] {
@@ -39,14 +62,17 @@ text[data-v-0a2c0dfd] {
 
 .background[data-v-04c8ffa8] {
   fill: none;
-  stroke: black;
   stroke-width: 1;
 }
 
 .background[data-v-4de75103] {
   fill: none;
-  stroke: black;
   stroke-width: 1;
+}
+
+.linePath[data-v-45fabe9a] {
+  fill: none;
+  stroke: black;
 }
 
 .background[data-v-36f30c73] {
@@ -60,16 +86,13 @@ text[data-v-0892aa36] {
   text-anchor: middle;
 }
 .separator[data-v-0892aa36] {
-  stroke: black;
   stroke-width: 0.5;
 }
 .bigSeparator[data-v-0892aa36] {
-  stroke: black;
   stroke-width: 1;
 }
 .background[data-v-0892aa36] {
   fill: none;
-  stroke: black;
   stroke-width: 1;
 }
 
@@ -79,4 +102,4 @@ text[data-v-0892aa36] {
   stroke: black;
 }
 
-/*# sourceMappingURL=app.23776501696b6534fbddf4c5a8ec918f.css.map*/
+/*# sourceMappingURL=app.feb4ca93b2abb6c0b85a31ec0cac654e.css.map*/
