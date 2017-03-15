@@ -2,7 +2,7 @@
   <g>
     <defs>
       <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto-start-reverse" markerUnits="strokeWidth">
-        <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+        <path d="M0,0 L0,6 L9,3 z" />
       </marker>
     </defs>
     <line
@@ -10,7 +10,6 @@
       :y1="cy1"
       :x2="cx2"
       :y2="cy2"
-      stroke="#000"
       stroke-width="2"
       marker-end="url(#arrow-end)"
       marker-start="url(#arrow-end)"
@@ -51,7 +50,6 @@ export default {
 <style lang='scss' scoped>
 .background {
   fill: none;
-  stroke: black;
-  stroke-width:1
+  stroke-width: 1;
 }
 </style>

@@ -23,6 +23,10 @@
     </tr>
   </table>
 
+  <picHolder picName="Stack register">
+    <p4/>
+  </picHolder>
+
   <div style="height: 400px"></div>
 
 </div>
@@ -39,7 +43,8 @@ export default {
     p1: require('./von-neuman-1'),
     p2: require('./von-neuman-2/index'),
     p3_1: require('./registers/v1'),
-    p3_2: require('./registers/v2')
+    p3_2: require('./registers/v2'),
+    p4: require('./reg-stack/index'),
   }
 
 }
@@ -48,10 +53,12 @@ export default {
 
 <style lang='scss'>
 
+$active-color: black;
+$nonactive-color: gray;
+
 .monofont {
   font-family:monospace;
   font-size: 15px;
-  /*letter-spacing: -2px;*/
 }
 
 table,
@@ -59,8 +66,27 @@ svg {
   margin: auto;
 }
 
-table td {
-  vertical-align: top
+table {
+  td {
+    vertical-align: top
+  }
+}
+
+@mixin elems-colors($color) {
+  path,
+  text {
+    fill: $color;
+  }
+  line,
+  rect {
+    stroke: $color;
+  }
+}
+
+@include elems-colors($active-color);
+
+.nonactive {
+  @include elems-colors($nonactive-color);
 }
 
 </style>

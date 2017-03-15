@@ -54,16 +54,13 @@ text {
   text-anchor: middle;
 }
 .separator {
-  stroke: black;
   stroke-width: 0.5;
 }
 .bigSeparator {
-  stroke: black;
   stroke-width: 1;
 }
 .background {
   fill: none;
-  stroke: black;
   stroke-width:1;
 }
 </style>

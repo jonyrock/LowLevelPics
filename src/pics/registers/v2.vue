@@ -1,6 +1,6 @@
 <template>
   <svg width="192" height="432">
-    <g opacity="0.5" transform="translate(1,1)">
+    <g transform="translate(1,1)" class="nonactive">
       <cpuBase :height="430" />
     </g>
     <block width="180" :height="240" x="5" y="181">
