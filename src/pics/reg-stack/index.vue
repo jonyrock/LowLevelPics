@@ -1,6 +1,6 @@
 <template>
   <svg width="592" height="352">
-    <g opacity="0.5" transform="translate(1,1)">
+    <g transform="translate(1,1)" class="nonactive">
       <cpuBase :height="350" />
     </g>
     <block width="180" :height="160" x="5" y="181">
@@ -28,7 +28,10 @@
         <mu y="0"   value="11011100" address="0000 0000" />
         <mu y="30"  value="10011110" address="0000 0001" />
         <mu y="60"  value="11111001" address="0000 0002" />
-        <mu y="120" value="00010110" address="E280 9473" />
+
+        <g class="active">
+          <mu y="120" value="00010110" address="E280 9473" />
+        </g>
 
         <mu y="180" value="00110010" address="FFFF FFFF" />
       </g>

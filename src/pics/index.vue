@@ -27,6 +27,10 @@
     <p4/>
   </picHolder>
 
+  <picHolder picName="Forth machine">
+    <p5/>
+  </picHolder>
+
   <div style="height: 400px"></div>
 
 </div>
@@ -45,6 +49,7 @@ export default {
     p3_1: require('./registers/v1'),
     p3_2: require('./registers/v2'),
     p4: require('./reg-stack/index'),
+    p5: require('./forth-machine/index'),
   }
 }
 
