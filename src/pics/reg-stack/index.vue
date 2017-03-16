@@ -49,7 +49,7 @@ export default {
   components: {
     r: require('../registers/register'),
     rb: require('../registers/register-with-box'),
-    mu: require('../von-neuman-2/memory-unit')
+    mu: require('../memory/memory-unit')
   },
   computed: {
     leftX: function functionName() {
