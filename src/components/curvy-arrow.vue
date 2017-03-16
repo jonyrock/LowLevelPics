@@ -11,6 +11,7 @@
       :d="d"
       stroke-width="2"
       marker-end="url(#carrow-end)"
+      stroke-dasharray="5, 5"
     />
   </g>
 </template>

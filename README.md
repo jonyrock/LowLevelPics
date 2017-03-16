@@ -1,4 +1,4 @@
-# d3vue
+# Vue SVG
 
 A list of Vue.js / D3.js [examples](https://github.com/corpglory/d3vue/tree/master/src/d3-components)
 
@@ -32,5 +32,5 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 Sponsored by [CorpGlory](http://corpglory.com)
 Updates about project: http://twitter.com/corpglory
 
-If you like Data Visualisation, 
+If you like Data Visualisation,
 please consider to join to community http://corpglory.com/join
