@@ -7,12 +7,30 @@
     </defs>
     <line
       :x1="cx1"
+      :y1="cy1 - 2"
+      :x2="cx2"
+      :y2="cy2 - 2"
+      stroke-width="2"
+
+    />
+
+    <line
+      :x1="cx1"
       :y1="cy1"
       :x2="cx2"
       :y2="cy2"
       stroke-width="2"
       marker-end="url(#arrow-end)"
       marker-start="url(#arrow-end)"
+      style="stroke: none"
+    />
+
+    <line
+      :x1="cx1"
+      :y1="cy1 + 2"
+      :x2="cx2"
+      :y2="cy2 + 2"
+      stroke-width="2"
     />
   </g>
 </template>
