@@ -10,7 +10,8 @@
     <g v-for="letter in letters">
       <text
         :x="letter.x + 10"
-        y="19"
+        y="18"
+        class="monofont"
       >
         {{ letter.value }}
       </text>
@@ -50,7 +51,7 @@ export default {
 
 <style lang='scss' scoped>
 text {
-  font-size: 16px;
+  font-size: 18px;
   text-anchor: middle;
 }
 .separator {

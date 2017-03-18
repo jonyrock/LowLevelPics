@@ -4,7 +4,7 @@
       class="monofont"
       text-anchor="left"
       x="0"
-      y="19"
+      y="17.5"
     >{{address}}</text>
     <boxedText :x="90" :value="value" />
   </g>
