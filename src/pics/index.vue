@@ -1,35 +1,22 @@
 <template>
 <div>
-  <picHolder picName="Von Neumann Architecture - 1">
-    <p1/>
-  </picHolder>
-
-  <picHolder picName="Von Neumann Architecture - 2">
-    <p2/>
-  </picHolder>
+  <picHolder picName="Von Neumann Architecture - 1"><p1/></picHolder>
+  <picHolder picName="Von Neumann Architecture - 2"><p2/></picHolder>
 
   <table style="width:500px">
     <tr>
       <td>
-        <picHolder picName="Registers - Version 1">
-          <p3_1/>
-        </picHolder>
+        <picHolder picName="Registers - Version 1"><p3_1/></picHolder>
       </td>
       <td>
-        <picHolder picName="Registers - Version 2">
-          <p3_2/>
-        </picHolder>
+        <picHolder picName="Registers - Version 2"><p3_2/></picHolder>
       </td>
     </tr>
   </table>
 
-  <picHolder picName="Stack register">
-    <p4/>
-  </picHolder>
-
-  <picHolder picName="Forth machine">
-    <p5/>
-  </picHolder>
+  <picHolder picName="Stack register"><p4/></picHolder>
+  <picHolder picName="Compilation pipeline"><p5/></picHolder>
+  <picHolder picName="Forth machine"><p6/></picHolder>
 
   <div style="height: 400px"></div>
 
@@ -49,7 +36,8 @@ export default {
     p3_1: require('./registers/v1'),
     p3_2: require('./registers/v2'),
     p4: require('./reg-stack/index'),
-    p5: require('./forth-machine/index'),
+    p5: require('./compilation-pipeline/index'),
+    p6: require('./forth-machine/index'),
   }
 }
 
