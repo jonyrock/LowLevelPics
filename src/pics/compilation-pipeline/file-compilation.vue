@@ -9,7 +9,7 @@
     </text>
     <arrow x1="90" y1="25" x2="90" y2="60" />
     <g transform="translate(0,61)">
-      <block width="180" height="70" x="5" y="0" label="Prepocessor" />
+      <block width="180" height="70" x="5" y="0" label="Preprocessor" />
       <block width="180" height="70" x="5" y="150" label="Compiler" />
       <labeledArrow x1="90" y1="70" x2="90" y2="150">
         <text>code with substitutions</text>
