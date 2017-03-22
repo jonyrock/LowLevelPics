@@ -43,7 +43,7 @@
     <g class="nonactive">
       <dearrow x1="190" y1="100" x2="300" y2="100" />
     </g>
-    <curvyArrow x1="178" y1="288" x2="290" y2="220" />
+    <curvyArrow x1="178" y1="288" x2="290" y2="218.5" />
   </svg>
 </template>
 
