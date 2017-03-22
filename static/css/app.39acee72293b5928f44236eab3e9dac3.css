@@ -65,6 +65,15 @@ text[data-v-0a2c0dfd] {
   stroke-width: 1;
 }
 
+.background[data-v-d8bcddb8] {
+  fill: none;
+  stroke-width: 1;
+}
+
+line[data-v-ec1cf92c] {
+  stroke-width: 2;
+}
+
 .background[data-v-4de75103] {
   fill: none;
   stroke-width: 1;
@@ -82,7 +91,7 @@ text[data-v-0a2c0dfd] {
 }
 
 text[data-v-0892aa36] {
-  font-size: 16px;
+  font-size: 18px;
   text-anchor: middle;
 }
 .separator[data-v-0892aa36] {
@@ -102,4 +111,4 @@ text[data-v-0892aa36] {
   stroke: black;
 }
 
-/*# sourceMappingURL=app.feb4ca93b2abb6c0b85a31ec0cac654e.css.map*/
+/*# sourceMappingURL=app.39acee72293b5928f44236eab3e9dac3.css.map*/
