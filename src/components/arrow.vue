@@ -12,6 +12,7 @@
       :y2="cy2"
       stroke-width="2"
       marker-end="url(#arrow-end)"
+      markerUnits="10"
     />
   </g>
 </template>

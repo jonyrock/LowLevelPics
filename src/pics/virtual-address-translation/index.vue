@@ -7,7 +7,7 @@ TODO:
 
 <template>
   <svg width="580" height="591">
-    <tb :x="1" :y="1" :cols="20" />
+    <tb :x="1" :y="1" :cols="20" :shift="3" />
   </svg>
 </template>
 
