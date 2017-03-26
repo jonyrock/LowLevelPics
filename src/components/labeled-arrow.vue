@@ -50,7 +50,6 @@ export default {
       return (+this.y1 + +this.y2) / 2;
     },
     anchors: function() {
-      console.log(this.mx + this.ev.x * 3);
       return [
         {
           x: +this.x1,

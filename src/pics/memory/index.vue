@@ -10,7 +10,8 @@
     <mu y="120" value="00110010" address="FFFF FFFF" />
   </g>
 
-  <text font-weight="bold" :x="270 / 2" y="140" text-anchor="middle"> ... </text>
+  <tdots :x="270 / 2" :y="140" />
+
 </block>
 </template>
 

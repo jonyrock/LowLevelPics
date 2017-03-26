@@ -36,8 +36,9 @@
         <mu y="180" value="00110010" address="FFFF FFFF" />
       </g>
 
-      <text font-weight="bold" :x="270 / 2" y="140" text-anchor="middle"> ... </text>
-      <text font-weight="bold" :x="270 / 2" y="200" text-anchor="middle"> ... </text>
+      <tdots :x="270 / 2" :y="140" />
+      <tdots :x="270 / 2" :y="200" />
+
     </block>
 
     <g class="nonactive">

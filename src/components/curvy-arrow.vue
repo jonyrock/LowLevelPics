@@ -5,7 +5,7 @@
         markerHeight="10"
         refX="0"
         refY="3"
-        orient="auto-start"
+        orient="auto"
         markerUnits="strokeWidth"
       >
       <!-- <g transform="translate(10,0) scale(-1,1)"> -->
