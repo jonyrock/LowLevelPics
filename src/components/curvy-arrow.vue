@@ -11,7 +11,7 @@
       :d="d"
       stroke-width="2"
       marker-end="url(#carrow-end)"
-      stroke-dasharray="5, 5"
+      :stroke-dasharray="dashArray"
     />
   </g>
 </template>
@@ -20,9 +20,28 @@
 const markerLength = 19;
 const d3 = require('d3');
 export default {
-  props: [
-    'x1', 'y1', 'x2', 'y2'
-  ],
+  props: {
+    x1: {
+      type: Number,
+      required: true
+    },
+    y1: {
+      type: Number,
+      required: true
+    },
+    x2: {
+      type: Number,
+      required: true
+    },
+    y2: {
+      type: Number,
+      required: true
+    },
+    isDashed: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     d: function() {
       return d3.line()
@@ -34,7 +53,13 @@ export default {
           [+this.x2 - 25, +this.y2 + 3],
           [+this.x2, +this.y2]
         ])
-
+    },
+    dashArray: function() {
+      if(this.isDashed) {
+        return '5, 5'
+      } else {
+        return '0'
+      }
     }
   }
 }
