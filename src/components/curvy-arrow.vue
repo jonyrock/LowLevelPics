@@ -1,8 +1,16 @@
 <template>
   <g>
     <defs>
-      <marker id="carrow-end" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <marker id="carrow-end" markerWidth="10"
+        markerHeight="10"
+        refX="0"
+        refY="3"
+        orient="auto-start"
+        markerUnits="strokeWidth"
+      >
+      <!-- <g transform="translate(10,0) scale(-1,1)"> -->
         <path d="M0,0 L0,6 L9,3 z" />
+      <!-- </g> -->
       </marker>
     </defs>
     <path
@@ -40,18 +48,23 @@ export default {
     isDashed: {
       type: Boolean,
       default: false
+    },
+    orientation: {
+      type: String,
+      default: 'rl'
     }
   },
   computed: {
     d: function() {
+      var mp = middleOrientationPoints.bind(this)();
       return d3.line()
         .curve(d3.curveCatmullRom)
         .x(d => d[0])
         .y(d => d[1])([
-          [+this.x1, +this.y1],
-          [+this.x1 + 25, +this.y1 - 3],
-          [+this.x2 - 25, +this.y2 + 3],
-          [+this.x2, +this.y2]
+          [this.x1, this.y1],
+          mp[0],
+          mp[1],
+          [this.x2, this.y2]
         ])
     },
     dashArray: function() {
@@ -63,6 +76,27 @@ export default {
     }
   }
 }
+
+function middleOrientationPoints() {
+
+  var l = 24;
+  var s = 4;
+  var m = {
+    'rl': [[l, -s], [-l, s]],
+    'tr': [[-s, -l], [l, s]]
+  }
+  var sm = m[this.orientation];
+
+
+  if(!sm) {
+    throw new Error('Can`t find orientation')
+  }
+  return [
+    [sm[0][0] + this.x1, sm[0][1] + this.y1],
+    [sm[1][0] + this.x2, sm[1][1] + this.y2],
+  ];
+}
+
 </script>
 
 <style lang='scss' scoped>
