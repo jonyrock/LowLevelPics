@@ -8,8 +8,10 @@ TODO:
 <template>
   <svg width="800" height="650">
 
-    <g id="pml4">
-      <tb :x="60" :y="40" :cols="30" :shift="3" />
+    <g id="pml4" transform='translate(60, 60)'>
+      <tb :x="0" :y="0" :cols="30" :shift="3" />
+      <r x="0" y="350">cr3</r>
+      <arrow :x1="0" :x2="0" :y1="335" :y2="300" />cr3
     </g>
 
     <g id="innerLevels" transform="translate(200, 1)">
@@ -26,14 +28,15 @@ TODO:
         name="Page Directory"
       />
 
+
       <sep :x="480" />
 
 
     </g>
 
-    <g id="memory">
+    <!-- <g id="memory">
       <tb :x="60" :y="40" :cols="30" :shift="3" />
-    </g>
+    </g> -->
 
     <g id="address">
       <!--
@@ -52,9 +55,10 @@ TODO:
 
 export default {
   components: {
-    'tb': require('./table'),
-    'il': require('./innerLevel'),
-    'sep': require('./separator')
+    tb: require('./table'),
+    il: require('./innerLevel'),
+    sep: require('./separator'),
+    r: require('../registers/register'),
   },
   computed: {
     lis: function() {
