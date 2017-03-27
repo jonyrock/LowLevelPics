@@ -1,7 +1,19 @@
 <template>
   <g>
     <defs>
-      <marker id="carrow-end" markerWidth="10"
+      <marker id="carrow-end-r" markerWidth="10"
+        markerHeight="10"
+        refX="0"
+        refY="3"
+        orient="auto"
+        markerUnits="strokeWidth"
+      >
+      <g transform="translate(8,0) scale(-1,1)">
+        <path d="M0,0 L0,6 L9,3 z" />
+      </g>
+      </marker>
+
+      <marker id="carrow-end-l" markerWidth="10"
         markerHeight="10"
         refX="0"
         refY="3"
@@ -12,13 +24,14 @@
         <path d="M0,0 L0,6 L9,3 z" />
       <!-- </g> -->
       </marker>
+
     </defs>
     <path
       class="linePath"
       fill="none"
       :d="d"
-      stroke-width="2"
-      marker-end="url(#carrow-end)"
+      :stroke-width="strokeWidth"
+      :marker-end="`url(#${marker})`"
       :stroke-dasharray="dashArray"
     />
   </g>
@@ -52,6 +65,10 @@ export default {
     orientation: {
       type: String,
       default: 'rl'
+    },
+    strokeWidth: {
+      type: Number,
+      default: 2
     }
   },
   computed: {
@@ -73,17 +90,21 @@ export default {
       } else {
         return '0'
       }
+    },
+    marker: function() {
+      return 'carrow-end-' + this.orientation[this.orientation.length-1];
     }
   }
 }
 
 function middleOrientationPoints() {
 
-  var l = 24;
-  var s = 4;
+  var l = 12 * this.strokeWidth;
+  var s = 2 * this.strokeWidth;
   var m = {
     'rl': [[l, -s], [-l, s]],
-    'tr': [[-s, -l], [l, s]]
+    'tr': [[-s, -l], [l, s]],
+    'rr': [[l, -s], [l, s]],
   }
   var sm = m[this.orientation];
 

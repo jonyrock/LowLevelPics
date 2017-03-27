@@ -6,12 +6,14 @@
       :y1="col.y" :y2="col.y"
     />
 
-    <arrow
+    <curvyArrow
       v-if="shift"
-      :x1="110"
-      :x2="110"
+      :x1="100"
+      :x2="100"
       :y1="height"
       :y2="shiftY2"
+      :strokeWidth="1"
+      orientation="rr"
     />
 
   </block>
