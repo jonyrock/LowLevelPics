@@ -1,12 +1,6 @@
 <template>
   <g :transform="`translate(${x}, 0)`">
-    <line
-      :x1="0" :x2="0"
-      y1="0"
-      y2="500"
-      class="separator"
-      stroke="gray"
-    />
+    <sep :x="0" />
 
     <g transform="scale(0.8)">
       <g v-for="block in blocks">
@@ -46,6 +40,7 @@ export default {
  },
  components: {
    'tb': require('./table'),
+   'sep': require('./separator')
  },
  computed: {
    blocks: function() {
@@ -78,8 +73,5 @@ export default {
 
 
 <style lang='scss' scoped>
-line.separator {
-  stroke: gray;
-  stroke-width: 2;
-}
+
 </style>
