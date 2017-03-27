@@ -60,6 +60,11 @@ text[data-v-0a2c0dfd] {
   font-weight: bold;
 }
 
+line[data-v-9e92eacc] {
+  stroke: gray;
+  stroke-width: 1;
+}
+
 .background[data-v-04c8ffa8] {
   fill: none;
   stroke-width: 1;
@@ -111,4 +116,4 @@ text[data-v-0892aa36] {
   stroke: black;
 }
 
-/*# sourceMappingURL=app.39acee72293b5928f44236eab3e9dac3.css.map*/
+/*# sourceMappingURL=app.18d7f1fdd1ab675a5fc5a92a950ecb90.css.map*/
