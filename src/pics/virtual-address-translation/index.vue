@@ -10,7 +10,7 @@
     <bt :x="110" :y="35" text="Page Map, Level 4 level" />
 
     <g id="pml4" transform='translate(60, 120)'>
-      <tb :x="0" :y="0" :cols="30" :shift="3"
+      <tb :x="0" :y="0" :cols="30" :shift="4"
         :filled="[4, 7, 9, 21, 26]"
        />
       <r x="0" y="350">cr3</r>
@@ -65,19 +65,19 @@ export default {
         {
           x: 0,
           name: "Page Directory,Pointer Tables",
-          items: "bb.s4b.b",
+          items: "bb.s5b.b",
           filled: ['13', '', '5', '9', '4']
         },
         {
           x: 160,
           name: "Page Directory",
-          items: "bb.s3.bb",
+          items: "bb.s6.bb",
           filled: ['', '3', '6']
         },
         {
           x: 320,
           name: "Page Table",
-          items: "bs4.bb.b",
+          items: "bs3.bb.b",
           filled: '134'
         }
       ]

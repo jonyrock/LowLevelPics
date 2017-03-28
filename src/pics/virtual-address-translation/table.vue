@@ -17,9 +17,9 @@
       v-if="shift"
       :x1="102"
       :x2="102"
-      :y1="height"
+      :y1="0"
       :y2="shiftY2"
-      :strokeWidth="1"
+      :strokeWidth="0.9"
       :corner="true"
       orientation="rr"
     />
@@ -79,7 +79,6 @@ export default {
       }));
     },
     holes: function() {
-
       var fls = typeof this.filled === 'string' ?
         this.filled.split('').map(e=>+e) :
         this.filled
@@ -89,7 +88,7 @@ export default {
         .value()
     },
     shiftY2: function() {
-      return this.height - this.shift * LINE_H;
+      return this.shift * LINE_H;
     }
   },
   methods: { }
