@@ -1,8 +1,9 @@
 <template>
   <g :transform="`translate(${x}, 0)`">
     <sep :x="0" />
+    <bt :text="name" :x="80" :y="35" />
 
-    <g transform="scale(0.8)">
+    <g transform="translate(0, 50) scale(0.8)">
       <g v-for="block in blocks">
         <tb v-if="block.type == 'b'"
           :x="50" :y="block.y" :cols="10"
@@ -40,7 +41,8 @@ export default {
  },
  components: {
    'tb': require('./table'),
-   'sep': require('./separator')
+   'sep': require('./separator'),
+   'bt': require('./blockTitle'),
  },
  computed: {
    blocks: function() {

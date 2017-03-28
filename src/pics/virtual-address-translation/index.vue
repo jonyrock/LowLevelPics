@@ -8,7 +8,10 @@ TODO:
 <template>
   <svg width="800" height="650">
 
+    <bt :x="110" :y="35" text="Page Map, Level 4 level" />
+    <bt :x="750" :y="35" text="Memory" />
     <g id="pml4" transform='translate(60, 60)'>
+
       <tb :x="0" :y="0" :cols="30" :shift="3" />
       <r x="0" y="350">cr3</r>
       <arrow :x1="0" :x2="0" :y1="335" :y2="300" />cr3
@@ -17,7 +20,7 @@ TODO:
     <g id="innerLevels" transform="translate(200, 1)">
       <il
         :x="lis[0]" items="bs4.bb.b"
-        name="Page Directory Pointer Tables"
+        name="Page Directory,Pointer Tables"
       />
       <il
         :x="lis[1]" items="bs2.bb.b"
@@ -25,7 +28,7 @@ TODO:
       />
       <il
         :x="lis[2]" items="bs2.b.bb"
-        name="Page Directory"
+        name="Page Table"
       />
 
 
@@ -59,6 +62,7 @@ export default {
     il: require('./innerLevel'),
     sep: require('./separator'),
     r: require('../registers/register'),
+    bt: require('./blockTitle'),
   },
   computed: {
     lis: function() {
