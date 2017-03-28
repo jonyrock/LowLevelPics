@@ -1,10 +1,3 @@
-<!--
-TODO:
-  * Level table
-  * Memmory
-  * Offset
- -->
-
 <template>
   <svg width="850" height="650">
 
