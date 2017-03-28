@@ -1,9 +1,12 @@
 <template>
-  <g :transform="`translate(${x}, ${y})`">
-    <tb
-      :cols="40" :x="0" :y="0"
-    />
-  </g>
+<g :transform="`translate(${x}, ${y})`">
+<rect
+  fill="url(#crosshatch)"
+  width="330" height="31.5"
+  transform="scale(0.3)"
+  stroke-width="0"
+></rect>
+</g>
 </template>
 
 <script>
@@ -17,14 +20,6 @@ export default {
       type: Number,
       required: true,
     }
-  },
-  components: {
-    tb: require('./table')
   }
 }
 </script>
-
-
-<style lang='scss' scoped>
-
-</style>
