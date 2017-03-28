@@ -15,11 +15,12 @@
 
     <curvyArrow
       v-if="shift"
-      :x1="105"
-      :x2="105"
+      :x1="102"
+      :x2="102"
       :y1="height"
       :y2="shiftY2"
       :strokeWidth="1"
+      :corner="true"
       orientation="rr"
     />
     <rect

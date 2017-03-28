@@ -22,6 +22,6 @@ export default {
 <style scoped>
 line {
   stroke: gray;
-  stroke-width: 1;
+  stroke-width: 0;
 }
 </style>

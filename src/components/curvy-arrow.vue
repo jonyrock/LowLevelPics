@@ -69,19 +69,45 @@ export default {
     strokeWidth: {
       type: Number,
       default: 2
+    },
+    corner: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     d: function() {
       var mp = middleOrientationPoints.bind(this)();
+
+      var toPoint = [this.x2, this.y2];
+
+      var ml = 9 * this.strokeWidth;
+      var ce = this.orientation[this.orientation.length-1];
+      if(ce === 'l') {
+        toPoint[0] -= ml;
+        if(!this.corner) {
+          mp[1][0] -= ml;
+        }
+      }
+      if(ce === 'r') {
+        toPoint[0] += ml;
+        if(!this.corner) {
+          mp[1][0] += ml;
+        }
+      }
+
       return d3.line()
-        .curve(d3.curveCatmullRom)
+        .curve(
+          this.corner ?
+            d3.curveLinear :
+            d3.curveCatmullRom
+        )
         .x(d => d[0])
         .y(d => d[1])([
           [this.x1, this.y1],
           mp[0],
           mp[1],
-          [this.x2, this.y2]
+          toPoint
         ])
     },
     dashArray: function() {
@@ -92,6 +118,9 @@ export default {
       }
     },
     marker: function() {
+      if(this.corner) {
+        return 'carrow-end-l';
+      }
       return 'carrow-end-' + this.orientation[this.orientation.length-1];
     }
   }
@@ -101,12 +130,19 @@ function middleOrientationPoints() {
 
   var l = 12 * this.strokeWidth;
   var s = 2 * this.strokeWidth;
+  if(this.corner) {
+    s = 0;
+    //l /= 1.5;
+  }
   var m = {
     'rl': [[l, -s], [-l, s]],
     'tr': [[-s, -l], [l, s]],
     'rr': [[l, -s], [l, s]],
   }
   var sm = m[this.orientation];
+  if(this.orientation == 'rl' && this.y1 < this.y2) {
+    sm[0][1] = s; sm[1][1] = -s;
+  }
 
 
   if(!sm) {

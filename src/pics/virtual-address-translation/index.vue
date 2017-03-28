@@ -16,11 +16,12 @@ TODO:
 
     <bt :x="110" :y="35" text="Page Map, Level 4 level" />
 
-    <g id="pml4" transform='translate(60, 60)'>
-
-      <tb :x="0" :y="0" :cols="30" :shift="3" />
+    <g id="pml4" transform='translate(60, 120)'>
+      <tb :x="0" :y="0" :cols="30" :shift="3"
+        :filled="[4, 7, 9, 21, 26]"
+       />
       <r x="0" y="350">cr3</r>
-      <arrow :x1="0" :x2="0" :y1="335" :y2="300" />cr3
+      <arrow :x1="0" :x2="0" :y1="335" :y2="300" />
     </g>
 
     <g id="innerLevels" transform="translate(200, 1)">
@@ -31,20 +32,14 @@ TODO:
         :name="li.name"
         :filled="li.filled"
       />
-
-      <sep :x="480" />
-
     </g>
 
-    <bt :x="770" :y="35" text="Memory" />
-    <m :x="720" :y="50" />
-    <!-- <g id="memory">
-      <tb :x="60" :y="40" :cols="30" :shift="3" />
-    </g> -->
-
-    <g id="emtyBlocks">
-
+    <bt :x="90+680" :y="35" text="Memory" />
+    <g id="memory" transform="translate(680, 30)">
+      <m :x="40" :y="50" />
     </g>
+
+    <pt />
 
     <g id="address">
       <!--
@@ -68,7 +63,8 @@ export default {
     sep: require('./separator'),
     r: require('../registers/register'),
     bt: require('./blockTitle'),
-    m: require('./memory')
+    m: require('./memory'),
+    pt: require('./pointers')
   },
   computed: {
     lis: function() {
@@ -76,8 +72,8 @@ export default {
         {
           x: 0,
           name: "Page Directory,Pointer Tables",
-          items: "bs5.bb.b",
-          filled: ['13', '4', '', '9', '4']
+          items: "bb.s4b.b",
+          filled: ['13', '', '5', '9', '4']
         },
         {
           x: 160,
