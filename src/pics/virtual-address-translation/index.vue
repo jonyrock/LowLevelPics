@@ -6,10 +6,10 @@ TODO:
  -->
 
 <template>
-  <svg width="800" height="650">
+  <svg width="850" height="650">
 
     <bt :x="110" :y="35" text="Page Map, Level 4 level" />
-    <bt :x="750" :y="35" text="Memory" />
+
     <g id="pml4" transform='translate(60, 60)'>
 
       <tb :x="0" :y="0" :cols="30" :shift="3" />
@@ -31,12 +31,12 @@ TODO:
         name="Page Table"
       />
 
-
       <sep :x="480" />
-
 
     </g>
 
+    <bt :x="770" :y="35" text="Memory" />
+    <m :x="720" :y="50" />
     <!-- <g id="memory">
       <tb :x="60" :y="40" :cols="30" :shift="3" />
     </g> -->
@@ -63,6 +63,7 @@ export default {
     sep: require('./separator'),
     r: require('../registers/register'),
     bt: require('./blockTitle'),
+    m: require('./memory'),
   },
   computed: {
     lis: function() {

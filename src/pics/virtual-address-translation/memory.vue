@@ -1,22 +1,25 @@
 <template>
-  <block width="100" :height="height" :x="x" :y="y">
-    <line
-      v-for="col in ccols"
-      x1="0" x2="100"
-      :y1="col.y" :y2="col.y"
-    />
-    <arrow
-      v-if="shift"
-      :x1="110"
-      :x2="110"
-      :y1="height"
-      :y2="shiftY2"
-    />
-  </block>
+  <g :transform="`translate(${x}, ${y})`">
+    <tb cols="40" />
+  </g>
 </template>
 
 <script>
-
+export default {
+  props: {
+    x: {
+      type: Number,
+      required: true,
+    },
+    y: {
+      type: Number,
+      required: true,
+    }
+  },
+  components: {
+    tb: require('./table')
+  }
+}
 </script>
 
 
