@@ -28,6 +28,7 @@ text {
   fill: black;
 }
 line,
+path,
 rect {
   stroke: black;
 }
@@ -36,6 +37,7 @@ rect {
   fill: gray;
 }
 .nonactive line,
+.nonactive path,
 .nonactive rect {
   stroke: gray;
 }
@@ -44,68 +46,62 @@ rect {
   fill: black;
 }
 .active line,
+.active path,
 .active rect {
   stroke: black;
 }
 
-text[data-v-31cb10b8] {
+text[data-v-5c0a2df5] {
   text-anchor: middle;
   font-size: 16px;
   font-weight: bold;
 }
 
-text[data-v-0a2c0dfd] {
+text[data-v-33c5e2cc] {
   text-anchor: middle;
   font-size: 16px;
   font-weight: bold;
 }
 
-line[data-v-9e92eacc] {
+line[data-v-3803e8a9] {
   stroke: gray;
   stroke-width: 0;
 }
 
-.background[data-v-04c8ffa8] {
+.background[data-v-31ec5277] {
   fill: none;
   stroke-width: 1;
 }
 
-.background[data-v-d8bcddb8] {
+.background[data-v-7e76381a] {
   fill: none;
   stroke-width: 1;
 }
 
-line[data-v-ec1cf92c] {
+line[data-v-9a0ed18e] {
   stroke-width: 2;
 }
 
-.background[data-v-4de75103] {
+.background[data-v-80fda7dc] {
   fill: none;
   stroke-width: 1;
 }
 
-.linePath[data-v-45fabe9a] {
+.linePath[data-v-52027a29] {
   fill: none;
-  stroke: black;
 }
 
-.background[data-v-36f30c73] {
-  fill: none;
-  stroke: black;
-  stroke-width: 1;
-}
-
-text[data-v-0892aa36] {
+text[data-v-49dc7d14] {
   font-size: 18px;
   text-anchor: middle;
 }
-.separator[data-v-0892aa36] {
+.separator[data-v-49dc7d14] {
   stroke-width: 0.5;
 }
-.bigSeparator[data-v-0892aa36] {
+.bigSeparator[data-v-49dc7d14] {
   stroke-width: 1;
 }
-.background[data-v-0892aa36] {
+.background[data-v-49dc7d14] {
   fill: none;
   stroke-width: 1;
 }
@@ -116,4 +112,4 @@ text[data-v-0892aa36] {
   stroke: black;
 }
 
-/*# sourceMappingURL=app.295a56d77e583ccd7258ec6894a5c4cf.css.map*/
+/*# sourceMappingURL=app.7ab863e9fcf1678eb490eb64f727d616.css.map*/
