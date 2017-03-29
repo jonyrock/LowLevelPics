@@ -7,12 +7,12 @@
   <block :x="x" :y="y" width="120" height="485">
     <blockTitle> Memory </blockTitle>
     <g transform="translate(0, 40)">
-      <pf :x="0" :y="0" />
-      <pf :x="0" :y="105" />
+      <pf :x="0" :y="0" filled="0123456789" />
+      <pf :x="0" :y="105" filled="0123456789" />
       <tdots :x="60" :y="195 + 10" />
-      <pf :x="0" :y="225" />
+      <pf :x="0" :y="225" shift="4" filled="0123456789" />
       <tdots :x="60" :y="315 + 10" />
-      <pf :x="0" :y="345" />
+      <pf :x="0" :y="345" filled="0123456789" />
     </g>
   </block>
 </template>

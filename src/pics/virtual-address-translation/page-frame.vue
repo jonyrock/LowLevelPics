@@ -8,10 +8,15 @@
       page frame
     </text>
 
-    <g transform="scale(0.8)">
+    <g
+      transform="scale(0.8)"
+      :class="shift?'':'nonactive'"
+    >
       <tb
         :x="25" :y="10" :cols="10"
         :width="40"
+        :shift="shift"
+        :filled="filled"
       />
     </g>
 
@@ -28,6 +33,14 @@ export default {
     y: {
       type:Number,
       required:true
+    },
+    shift: {
+      type: Number,
+      default: 0
+    },
+    filled: {
+      type: [String, Array],
+      default: ''
     }
   },
   components: {
