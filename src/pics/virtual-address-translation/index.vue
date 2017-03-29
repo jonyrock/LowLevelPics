@@ -13,8 +13,8 @@
       <tb :x="0" :y="0" :cols="30" :shift="4"
         :filled="[4, 7, 9, 21, 26]"
        />
-      <r x="0" y="350">cr3</r>
-      <arrow :x1="0" :x2="0" :y1="335" :y2="300" />
+      <r x="45" y="-40">cr3</r>
+      <arrow :x1="40" :x2="-7" :y1="-35" :y2="3" strokeWidth="1" />
     </g>
 
     <g id="innerLevels" transform="translate(200, 1)">
@@ -69,7 +69,7 @@ export default {
           x: 160,
           name: "Page Directory",
           items: "bb.s6.bb",
-          filled: ['1', '3', '6', '7', '4']
+          filled: ['3', '3', '6', '7', '4']
         },
         {
           x: 320,
