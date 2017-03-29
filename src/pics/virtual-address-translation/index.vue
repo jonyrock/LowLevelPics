@@ -27,12 +27,9 @@
       />
     </g>
 
-    <bt :x="90+680" :y="35" text="Memory" />
-    <g id="memory" transform="translate(680, 30)">
-      <m :x="40" :y="50" />
-    </g>
+    <memory :x="705" :y="40" />
 
-    <pt />
+    <pointers />
 
     <g id="address">
       <!--
@@ -56,8 +53,8 @@ export default {
     sep: require('./separator'),
     r: require('../registers/register'),
     bt: require('./blockTitle'),
-    m: require('./memory'),
-    pt: require('./pointers')
+    memory: require('./memory'),
+    pointers: require('./pointers')
   },
   computed: {
     lis: function() {
@@ -72,13 +69,13 @@ export default {
           x: 160,
           name: "Page Directory",
           items: "bb.s6.bb",
-          filled: ['', '3', '6']
+          filled: ['1', '3', '6', '7', '4']
         },
         {
           x: 320,
           name: "Page Table",
           items: "bs3.bb.b",
-          filled: '134'
+          filled: ['14', '3', '', '', '0']
         }
       ]
     }

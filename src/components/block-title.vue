@@ -17,11 +17,3 @@ export default {
   }
 }
 </script>
-
-<style lang='scss' scoped>
-.background {
-  fill: none;
-  stroke: black;
-  stroke-width:1
-}
-</style>

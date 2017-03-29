@@ -159,6 +159,6 @@ function middleOrientationPoints() {
 <style lang='scss' scoped>
 .linePath {
   fill: none;
-  stroke: black;
+  
 }
 </style>

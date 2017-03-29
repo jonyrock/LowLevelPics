@@ -42,7 +42,7 @@ export default {
      required: true
    },
    filled: {
-     type: Array,
+     type: [Array, String],
      default: function() {
        return [];
      }

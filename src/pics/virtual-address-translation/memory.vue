@@ -1,10 +1,20 @@
 <template>
-  <g :transform="`translate(${x}, ${y})`">
-    <tb
-      :cols="40" :x="0" :y="0"
-      :filled="[1,2,3,5,7,10,12,13,14,15,20,21,22,23,24,25,28,29,30,31,32,33,34,35,36,37,38,39]"
-    />
-  </g>
+  <!-- <g :transform="`translate(${x}, ${y})`">
+
+
+  </g> -->
+
+  <block :x="x" :y="y" width="120" height="485">
+    <blockTitle> Memory </blockTitle>
+    <g transform="translate(0, 40)">
+      <pf :x="0" :y="0" />
+      <pf :x="0" :y="105" />
+      <tdots :x="60" :y="195 + 10" />
+      <pf :x="0" :y="225" />
+      <tdots :x="60" :y="315 + 10" />
+      <pf :x="0" :y="345" />
+    </g>
+  </block>
 </template>
 
 <script>
@@ -20,7 +30,7 @@ export default {
     }
   },
   components: {
-    tb: require('./table')
+    pf: require('./page-frame')
   }
 }
 </script>

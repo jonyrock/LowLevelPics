@@ -73,6 +73,7 @@ table {
     fill: $color;
   }
   line,
+  path,
   rect {
     stroke: $color;
   }
