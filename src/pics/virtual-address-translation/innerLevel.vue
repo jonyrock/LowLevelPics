@@ -8,6 +8,7 @@
         <tb v-if="block.type == 'b'"
           :x="50" :y="block.y" :cols="10"
           :filled="block.filled"
+          class="nonactive"
         />
         <tb v-if="block.type == 's'"
           :x="50" :y="block.y" :cols="10"

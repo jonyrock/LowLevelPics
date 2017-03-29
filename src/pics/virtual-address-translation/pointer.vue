@@ -7,6 +7,7 @@
     :strokeWidth="1"
     orientation="rl"
     :isDashed="!isPath"
+    :class="isPath?'':'nonactive'"
   />
 </template>
 
