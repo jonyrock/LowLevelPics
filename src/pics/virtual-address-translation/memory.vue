@@ -4,8 +4,8 @@
 
   </g> -->
 
-  <block :x="x" :y="y" width="120" height="485">
-    <blockTitle> Memory </blockTitle>
+  <block :x="x" :y="y" width="140" height="485">
+    <blockTitle> Physical Memory </blockTitle>
     <g transform="translate(0, 40)">
       <pf :x="0" :y="0" filled="0123456789" />
       <pf :x="0" :y="105" filled="0123456789" />

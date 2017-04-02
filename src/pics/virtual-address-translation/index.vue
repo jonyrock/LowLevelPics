@@ -7,7 +7,7 @@
       </pattern>
     </defs>
 
-    <bt :x="110" :y="35" text="Page Map, Level 4 level" />
+    <bt :x="110" :y="35" text="Page Map, Level 4" />
 
     <g id="pml4" transform='translate(60, 120)'>
       <tb :x="0" :y="0" :cols="30" :shift="4"
@@ -41,6 +41,15 @@
         />
       -->
     </g>
+
+
+    <g id="shift-names">
+      <sn :x="163" :y="116" name="A" />
+      <sn :x="322" :y="252" name="B" />
+      <sn :x="481" :y="252" name="C" />
+      <sn :x="641" :y="145" name="D" />
+      <sn :x="806" :y="310" name="E" />
+    </g>
   </svg>
 </template>
 
@@ -54,7 +63,8 @@ export default {
     r: require('../registers/register'),
     bt: require('./blockTitle'),
     memory: require('./memory'),
-    pointers: require('./pointers')
+    pointers: require('./pointers'),
+    sn: require('./shift-name')
   },
   computed: {
     lis: function() {
