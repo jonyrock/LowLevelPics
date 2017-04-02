@@ -15,7 +15,7 @@
       <r :x="rightX" :y="line(1)">rsi</r>
       <r :x="rightX" :y="line(2)">rdi</r>
       <g class="active">
-        <rb :x="rightX" :y="line(3.5)" value="00000000E2809473">rsp</rb>
+        <rb :x="rightX" :y="line(3.2)" value="00000000E2809473">rsp</rb>
       </g>
       <r :x="leftX" :y="line(5)">rbp</r>
       <r :x="rightX" :y="line(6)">rflags</r>
