@@ -1,9 +1,7 @@
 <template>
   <g>
     <defs>
-      <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto-start-reverse" markerUnits="strokeWidth">
-        <path d="M0,0 L0,6 L9,3 z" />
-      </marker>
+      <arrowEnd />
     </defs>
     <line
       :x1="cx1"
@@ -45,6 +43,9 @@ export default {
       type: Number,
       default: 2
     }
+  },
+  components: {
+    arrowEnd: require('./arrow-end')
   },
   computed: {
     cx1: function() {

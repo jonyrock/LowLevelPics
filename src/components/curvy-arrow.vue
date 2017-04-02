@@ -4,24 +4,24 @@
       <marker id="carrow-end-r" markerWidth="10"
         markerHeight="10"
         refX="0"
-        refY="3"
+        refY="4"
         orient="auto"
         markerUnits="strokeWidth"
       >
       <g transform="translate(8,0) scale(-1,1)">
-        <path d="M0,0 L0,6 L9,3 z" />
+        <arrowEndPath />
       </g>
       </marker>
 
       <marker id="carrow-end-l" markerWidth="10"
         markerHeight="10"
         refX="0"
-        refY="3"
+        refY="4"
         orient="auto"
         markerUnits="strokeWidth"
       >
       <!-- <g transform="translate(10,0) scale(-1,1)"> -->
-        <path d="M0,0 L0,6 L9,3 z" />
+        <arrowEndPath />
       <!-- </g> -->
       </marker>
 
@@ -123,6 +123,9 @@ export default {
       }
       return 'carrow-end-' + this.orientation[this.orientation.length-1];
     }
+  },
+  components: {
+    arrowEndPath: require('./arrow-end-path')
   }
 }
 
@@ -159,6 +162,6 @@ function middleOrientationPoints() {
 <style lang='scss' scoped>
 .linePath {
   fill: none;
-  
+
 }
 </style>
