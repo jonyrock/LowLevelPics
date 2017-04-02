@@ -34,7 +34,7 @@
 </template>
 
 <script>
-const markerLength = 19;
+const markerLength = 22;
 export default {
   props: [
     'x1', 'y1', 'x2', 'y2'

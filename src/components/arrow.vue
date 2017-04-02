@@ -16,7 +16,7 @@
 </template>
 
 <script>
-const markerLength = 19;
+const markerLength = 21;
 export default {
   props: {
     x1: {

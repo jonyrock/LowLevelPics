@@ -16,7 +16,7 @@
       </labeledArrow>
     </g>
 
-    <g transform="translate(0,280)">
+    <g transform="translate(0,281)">
       <arrow x1="90" y1="0" x2="90" y2="35" />
       <text
         text-anchor="middle"
