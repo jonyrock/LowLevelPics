@@ -1,5 +1,8 @@
 <template>
-  <text :x="x" :y="y"> {{ name }} </text>
+  <!-- <g transform="translate(0,0)"> -->
+  <g transform="translate(12,13)">
+    <text :x="x" :y="y"> {{ name }} </text>
+  </g>
 </template>
 
 <script>

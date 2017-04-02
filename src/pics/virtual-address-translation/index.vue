@@ -45,7 +45,7 @@
 
     <g id="shift-names">
       <sn :x="163" :y="116" name="A" />
-      <sn :x="322" :y="252" name="B" />
+      <sn :x="321" :y="252" name="B" />
       <sn :x="481" :y="252" name="C" />
       <sn :x="641" :y="145" name="D" />
       <sn :x="806" :y="310" name="E" />
