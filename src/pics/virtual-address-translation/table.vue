@@ -4,19 +4,20 @@
 
     <line
       v-for="col in ccols"
-      x1="0" x2="100"
+      x1="0" :x2="width"
       :y1="col.y" :y2="col.y"
     />
 
     <eti
       v-for="hole in holes"
+      :width="width"
       :x="0.5" :y="hole"
     />
 
     <curvyArrow
       v-if="shift"
-      :x1="102"
-      :x2="102"
+      :x1="width + 2"
+      :x2="width + 2"
       :y1="0"
       :y2="shiftY2"
       :strokeWidth="0.9"
@@ -25,7 +26,7 @@
     />
     <rect
       x="0" y="0"
-      width="100"
+      :width="width"
       :height="height"
       fill="none"
     />
@@ -43,26 +44,12 @@ const LINE_H = 10;
 
 export default {
   props: {
-    cols: {
-      type: Number,
-      required: true
-    },
-    x: {
-      type: Number,
-      required: true
-    },
-    y: {
-      type: Number,
-      required: true
-    },
-    shift: {
-      type: Number,
-      default: 0
-    },
-    filled: {
-      type: [String, Array],
-      default: ''
-    }
+    cols: { type: Number, required: true },
+    x: { type: Number, required: true },
+    y: { type: Number, required: true },
+    shift: { type: Number, default: 0 },
+    width: { type: Number, default: 100 },
+    filled: { type: [String, Array], default: '' }
   },
   components: {
     eti: require('./emptyTableItem')

@@ -1,5 +1,5 @@
 <template>
-  <svg width="272" height="192">
+  <svg width="600" height="500">
     <ripBase :x="1" :y="1" />
   </svg>
 </template>

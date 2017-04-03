@@ -14,7 +14,7 @@
     >
       <tb
         :x="25" :y="10" :cols="10"
-        :width="40"
+        
         :shift="shift"
         :filled="filled"
       />
