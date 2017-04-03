@@ -20,6 +20,8 @@
 
   <picHolder picName="Virtual address translation"><p7/></picHolder>
 
+  <picHolder picName="Rip vs data section"><p8/></picHolder>
+
   <div style="height: 400px"></div>
 
 </div>
@@ -41,6 +43,7 @@ export default {
     p5: require('./compilation-pipeline/index'),
     p6: require('./forth-machine/index'),
     p7: require('./virtual-address-translation/index'),
+    p8: require('./rip-data-section/index'),
   }
 }
 

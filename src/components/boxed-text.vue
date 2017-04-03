@@ -42,7 +42,7 @@ export default {
         value: d,
         i: i,
         x: i * 20
-      }))
+      }));
     }
   }
 
