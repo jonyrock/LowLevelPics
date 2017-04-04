@@ -91,12 +91,12 @@ export default {
     },
     addressWords: function() {
       return [
-        { text: '', width: 60 },
-        { text: 'A', width: 60, },
-        { text: 'B', width: 60, },
-        { text: 'C', width: 60, },
-        { text: 'D', width: 60, },
-        { text: 'E', width: 60, },
+        { text: '',  width: 60, lineMarker: 48 },
+        { text: 'A', width: 60, lineMarker: 39 },
+        { text: 'B', width: 60, lineMarker: 30 },
+        { text: 'C', width: 60, lineMarker: 21 },
+        { text: 'D', width: 60, lineMarker: 12 },
+        { text: 'E', width: 60, lineMarker: 0 },
       ];
     }
   },

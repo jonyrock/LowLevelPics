@@ -21,10 +21,19 @@
     <line
       v-for="line in lines"
       y1="0" y2="28"
-      :x1="line.x + line.width"
-      :x2="line.x + line.width"
+      :x1="line.lx"
+      :x2="line.lx"
       :class="(line.bold) ? 'bigSeparator': 'separator'"
     />
+
+    <text
+      v-for="lm in lineMarkers"
+      class="lineMarker"
+      :x="lm.lx"
+      :y="-4"
+    >
+      {{ lm.lineMarker }}
+    </text>
 
   </g>
 </template>
@@ -60,6 +69,8 @@ export default {
         }
         r.textAnchor = 'middle';
         r.tx = r.x + r.width / 2;
+        r.lineMarker = w.lineMarker;
+        r.lx = r.x + r.width;
 
         r.bold = w.bold;
         res.push(r);
@@ -70,6 +81,9 @@ export default {
     },
     lines: function() {
       return _.take(this.wwrods, this.wwrods.length - 1);
+    },
+    lineMarkers: function() {
+      return _.filter(this.wwrods, e => e.lineMarker !== undefined);
     },
     width: function() {
       var w = this.wwrods[this.wwrods.length - 1];
@@ -84,6 +98,10 @@ export default {
 text {
   font-size: 18px;
 }
+.lineMarker {
+  text-anchor: middle;
+  font-size: 12px;
+}
 .separator {
   stroke-width: 0.5;
 }
@@ -94,4 +112,5 @@ text {
   fill: none;
   stroke-width:1;
 }
+
 </style>
