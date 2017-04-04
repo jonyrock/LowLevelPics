@@ -1,7 +1,7 @@
 <template>
   <svg width="600" height="372">
     <g transform="translate(1,41)">
-      <text x="205" y="-5"> Dictionary Entry </text>
+      <text x="300" y="195"> Dictionary Entry </text>
       <text x="0" y="95"> Dictionary entry </text>
       <boxedWords
         :x="205" :y="0"
