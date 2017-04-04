@@ -107,7 +107,7 @@ text {
   font-size: 17px;
 }
 .lineMarker {
-  text-anchor: middle;
+  text-anchor: end;
   font-size: 12px;
 }
 .separator {
