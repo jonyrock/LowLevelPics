@@ -1,5 +1,5 @@
 <template>
-  <svg width="430" height="500">
+  <svg width="430" height="400">
     <g id="before" transform="translate(10,0)">
       <ripBase :x="10" :y="1" />
       <g transform="translate(20, 0)">

@@ -82,6 +82,10 @@ export default {
       type: Number,
       default: -1
     },
+    l2: {
+      type: Number,
+      default: -1
+    },
     s: {
       type: Number,
       default: -1
@@ -144,9 +148,18 @@ export default {
 function middleOrientationPoints() {
 
   var l = 12 * this.strokeWidth;
+
   if(this.l !== -1) {
     l = this.l;
   }
+
+  var l1 = l;
+  var l2 = l;
+
+  if(this.l2 !== -1) {
+    l2 = this.l2;
+  }
+
   var s = 3 * this.strokeWidth;
   if(this.s !== -1) {
     s = this.s;
@@ -156,12 +169,12 @@ function middleOrientationPoints() {
     //l /= 1.5;
   }
   var m = {
-    'lr': [[-l, s], [l, -s]],
-    'll': [[-l, -s], [-l, s]],
-    'tr': [[-s, -l], [l, s]],
-    'tl': [[s, -l], [-l, s]],
-    'rr': [[l, -s], [l, s]],
-    'rl': [[l, -s], [-l, s]],
+    'lr': [[-l1, s], [l2, -s]],
+    'll': [[-l1, -s], [-l2, s]],
+    'tr': [[-s, -l1], [l2, s]],
+    'tl': [[s, -l1], [-l2, s]],
+    'rr': [[l1, -s], [l2, s]],
+    'rl': [[l1, -s], [-l2, s]],
   }
   var sm = m[this.orientation];
   if(

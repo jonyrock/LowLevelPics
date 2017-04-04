@@ -1,16 +1,20 @@
 <template>
-  <svg width="430" height="500">
-    <g id="before" transform="translate(10,0)">
+  <svg width="460" height="400">
+    <g id="before" transform="translate(10,0)" >
       <ripBase :x="10" :y="1" />
-      <g transform="translate(20, 0)">
+      <g transform="translate(20, 0)" class="nonactive">
         <curvyArrow
-          :x1="213"
+          :x1="399"
           :y1="198"
-          :y2="287"
-          :x2="172"
+          :x2="354"
+          :y2="97"
           :strokeWidth="1"
-          orientation="lr"
+          orientation="rr"
           :isDashed="true"
+          :corner="true"
+          :l="25"
+          :l2="70"
+          class="active"
         />
 
         <curvyArrow
@@ -38,6 +42,7 @@
       </g>
 
       <curvyArrow
+        class="nonactive"
         :x1="25"
         :x2="25"
         :y1="308"
@@ -48,6 +53,9 @@
         orientation="ll"
         :isDashed="false"
       />
+
+
+
 
     </g>
   </svg>

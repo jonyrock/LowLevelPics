@@ -22,6 +22,8 @@
 
   <picHolder picName="PLT Before resolving"><p8_1/></picHolder>
 
+  <picHolder picName="PLT After resolving"><p8_2/></picHolder>
+
   <div style="height: 400px"></div>
 
 </div>
