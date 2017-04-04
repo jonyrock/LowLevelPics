@@ -25,35 +25,35 @@ export default {
     prog: function() {
       return [
         { text: '...',  width: 40 },
-        { text: 'xt_square', width: 100 },
+        { text: 'xt_square', style:'mono' },
         { text: '...', width: 40 },
       ];
     },
     squareDict: function() {
       return [
         { text: 'link', width: 60, bold: true },
-        { text: 's', width: 20 },
-        { text: 'q', width: 20 },
-        { text: 'u', width: 20 },
-        { text: 'a', width: 20 },
-        { text: 'r', width: 20 },
-        { text: 'e', width: 20 },
-        { text: '0', width: 20, bold: true },
+        { text: 's', style:'mono' },
+        { text: 'q', style:'mono' },
+        { text: 'u', style:'mono' },
+        { text: 'a', style:'mono' },
+        { text: 'r', style:'mono' },
+        { text: 'e', style:'mono' },
+        { text: '0', style:'mono', bold: true },
         { text: 'flags', width: 60, bold: true },
-        { text: 'docol', width: 60 },
-        { text: 'xt_dup', width: 80 },
-        { text: 'xt_mul', width: 80 },
-        { text: 'xt_exit', width: 80 },
+        { text: 'docol', style:'mono' },
+        { text: 'xt_dup', style:'mono' },
+        { text: 'xt_mul', style:'mono'},
+        { text: 'xt_exit', style:'mono' },
       ];
     },
     dupDict: function() {
       return [
         { text: 'link', width: 60, bold: true },
-        { text: 'd', width: 20 },
-        { text: 'u', width: 20 },
-        { text: 'p', width: 20 },
-        { text: '0', width: 20, bold: true },
-        { text: 'dup_impl', width: 100 },
+        { text: 'd', style:'mono' },
+        { text: 'u', style:'mono' },
+        { text: 'p', style:'mono' },
+        { text: '0', style:'mono', bold: true },
+        { text: 'dup_impl', style:'mono' },
       ];
     }
   }

@@ -24,7 +24,7 @@
 
   <picHolder picName="PLT After resolving"><p8_2/></picHolder>
 
-  <picHolder picName="PLT After resolving"><p9/></picHolder>
+  <picHolder picName="Inderect threated code"><p9/></picHolder>
 
   <div style="height: 400px"></div>
 

@@ -14,6 +14,7 @@
       :text-anchor="w.textAnchor"
       :x="w.tx"
       :y="20"
+      :class="w.class"
     >
       {{ w.text }}
     </text>
@@ -67,6 +68,11 @@ export default {
         if(w.width) {
           r.width = w.width;
         }
+        r.class = w.style ? w.style : '';
+        if(r.class === 'mono') {
+          r.class = 'monofont';
+          r.width += 10;
+        }
         r.textAnchor = 'middle';
         r.tx = r.x + r.width / 2;
         r.lineMarker = w.lineMarker;
@@ -75,7 +81,6 @@ export default {
         r.bold = w.bold;
         res.push(r);
         cx += r.width;
-
       }
       return res;
     },
@@ -98,6 +103,9 @@ export default {
 text {
   font-size: 18px;
 }
+.monofont {
+  font-size: 17px;
+}
 .lineMarker {
   text-anchor: middle;
   font-size: 12px;
@@ -112,5 +120,4 @@ text {
   fill: none;
   stroke-width:1;
 }
-
 </style>
