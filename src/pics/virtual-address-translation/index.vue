@@ -31,13 +31,14 @@
 
     <pointers />
 
-    <g transform="translate(240,600)">
+    <g transform="translate(260,600)">
+      <bt :x="180" :y="0" text="Virtual Address" />
       <boxedWords
-        :x="0" :y="0"
+        :x="0" :y="20"
         :words="addressWords"
       />
       <emptyTableItem
-        :x="0.5" :y="0.5"
+        :x="0.5" :y="20.5"
         :width="59.5" :height="27"
       />
     </g>
