@@ -107,15 +107,18 @@ text[data-v-49dc7d14] {
 text[data-v-048fa2a0] {
   font-size: 18px;
 }
+.monofont[data-v-048fa2a0] {
+  font-size: 17px;
+}
 .lineMarker[data-v-048fa2a0] {
-  text-anchor: middle;
+  text-anchor: end;
   font-size: 12px;
 }
 .separator[data-v-048fa2a0] {
   stroke-width: 0.5;
 }
 .bigSeparator[data-v-048fa2a0] {
-  stroke-width: 1;
+  stroke-width: 2;
 }
 .background[data-v-048fa2a0] {
   fill: none;
@@ -128,4 +131,4 @@ text[data-v-048fa2a0] {
   stroke: black;
 }
 
-/*# sourceMappingURL=app.d809cce116732a499f04fd5c62e0878c.css.map*/
+/*# sourceMappingURL=app.c9f3e40e231cce6e77055d949bffee15.css.map*/
