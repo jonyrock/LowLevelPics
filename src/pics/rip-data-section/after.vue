@@ -23,16 +23,17 @@
           :y1="257"
           :y2="193"
           :s="5"
+          :l2="30"
           :strokeWidth="1"
           orientation="tl"
           :isDashed="false"
         />
 
         <curvyArrow
-          :x1="130"
-          :x2="130"
+          :x1="135"
+          :x2="135"
           :y1="78"
-          :y2="266"
+          :y2="267"
           :l="15"
           :strokeWidth="1"
           :corner="true"

@@ -31,16 +31,10 @@
 
     <pointers />
 
-    <g id="address">
-      <!--
-        <curvyArrow
-          :x1="200" :y1="300"
-          :x2="110" :y2="200"
-          :cols="20" :shift="3"
-          orientation="tr"
-        />
-      -->
-    </g>
+    <boxedWords
+      :x="100" :y="100"
+      :words="addressWords"
+    />
 
 
     <g id="shift-names">
@@ -88,6 +82,13 @@ export default {
           filled: ['14', '3', '', '', '0']
         }
       ]
+    },
+    addressWords: function() {
+      return [
+        { text: 'some' },
+        { text: 'text' },
+        { text: 'bro' }
+      ];
     }
   },
   methods: {
