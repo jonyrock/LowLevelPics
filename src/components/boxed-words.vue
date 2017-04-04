@@ -106,7 +106,7 @@ text {
   stroke-width: 0.5;
 }
 .bigSeparator {
-  stroke-width: 1;
+  stroke-width: 2;
 }
 .background {
   fill: none;

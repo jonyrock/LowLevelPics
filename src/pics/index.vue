@@ -24,6 +24,8 @@
 
   <picHolder picName="PLT After resolving"><p8_2/></picHolder>
 
+  <picHolder picName="PLT After resolving"><p9/></picHolder>
+
   <div style="height: 400px"></div>
 
 </div>
@@ -47,6 +49,7 @@ export default {
     p7: require('./virtual-address-translation/index'),
     p8_1: require('./rip-data-section/before'),
     p8_2: require('./rip-data-section/after'),
+    p9: require('./indirect-threaded-code/index'),
   }
 }
 
