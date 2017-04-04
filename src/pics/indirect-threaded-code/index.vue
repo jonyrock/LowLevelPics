@@ -1,19 +1,80 @@
 <template>
-  <svg width="800" height="352">
-    <boxedWords
-      :x="100" :y="20"
-      :words="prog"
-    />
+  <svg width="600" height="352">
+    <g transform="translate(1,1)">
+      <boxedWords
+        :x="205" :y="0"
+        :words="prog"
+      />
 
-    <boxedWords
-      :x="100" :y="100"
-      :words="squareDict"
-    />
+      <boxedWords
+        :x="0" :y="100"
+        :words="squareDict"
+      />
 
-    <boxedWords
-      :x="400" :y="180"
-      :words="dupDict"
-    />
+      <boxedWords
+        :x="300" :y="200"
+        :words="dupDict"
+      />
+
+      <arrow
+        :x1="300" :y1="28"
+        :x2="300" :y2="110"
+        :strokeWidth="1"
+        :isDashed="true"
+      />
+
+      <curvyArrow
+        :x1="305" :y1="128"
+        :x2="490" :y2="193"
+        orientation="bt"
+        :strokeWidth="1"
+        :isDashed="true"
+      />
+
+      <curvyArrow
+        :x1="295" :y1="128"
+        :x2="115" :y2="211"
+        orientation="br"
+        :l2="20"
+        :strokeWidth="1"
+      />
+
+      <curvyArrow
+        :x1="490" :y1="228"
+        :x2="390" :y2="271"
+        :l2="20"
+        orientation="br"
+        :strokeWidth="1"
+      />
+
+
+      <namedCode
+        :x="50"
+        :y="175"
+        :width="172"
+        :height="125"
+      >
+docol:
+  sub rstack, 8
+  mov [rstack], pc
+  add w, 8
+  mov pс, w
+  jmp next
+      </namedCode>
+
+      <namedCode
+        :x="300"
+        :y="235"
+        :width="172"
+        :height="65"
+      >
+dup_impl:
+  push qword[rsp]
+  jmp next
+      </namedCode>
+
+
+    </g>
 
   </svg>
 </template>
@@ -21,6 +82,9 @@
 <script>
 
 export default {
+  components: {
+    namedCode: require('../rip-data-section/named-code')
+  },
   computed: {
     prog: function() {
       return [

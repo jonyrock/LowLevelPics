@@ -11,6 +11,7 @@
       :stroke-width="strokeWidth"
       marker-end="url(#arrow-end)"
       markerUnits="10"
+      :stroke-dasharray="dashArray"
     />
   </g>
 </template>
@@ -19,30 +20,12 @@
 const markerLength = 21;
 export default {
   props: {
-    x1: {
-      type: Number,
-      required: true
-    },
-    y1: {
-      type: Number,
-      required: true
-    },
-    x2: {
-      type: Number,
-      required: true
-    },
-    y2: {
-      type: Number,
-      required: true
-    },
-    isDashed: {
-      type: Boolean,
-      default: false
-    },
-    strokeWidth: {
-      type: Number,
-      default: 2
-    }
+    x1: { type: Number, required: true },
+    y1: { type: Number, required: true },
+    x2: { type: Number, required: true },
+    y2: { type: Number, required: true },
+    isDashed: { type: Boolean, default: false },
+    strokeWidth: { type: Number, default: 2 }
   },
   components: {
     arrowEnd: require('./arrow-end')
@@ -66,7 +49,14 @@ export default {
       return [
         v[0] / l, v[1] / l
       ];
-    }
+    },
+    dashArray: function() {
+      if(this.isDashed) {
+        return '5, 5'
+      } else {
+        return '0'
+      }
+    },
   }
 }
 </script>
