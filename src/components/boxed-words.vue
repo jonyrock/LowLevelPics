@@ -3,14 +3,16 @@
     <rect
       class='background'
       :width="width"
-      height="25"
+      x="0"
+      height="28"
       rx="1"
       ry="1"
     ></rect>
 
     <text
       v-for="w in wwrods"
-      :x="w.x + 10"
+      text-anchor="left"
+      :x="w.x + PADDING"
       :y="20"
     >
       {{ w.text }}
@@ -18,7 +20,7 @@
 
     <line
       v-for="line in lines"
-      y1="0" y2="25"
+      y1="0" y2="28"
       :x1="line.x + line.width"
       :x2="line.x + line.width"
       :class="(line.bold) ? 'bigSeparator': 'separator'"
@@ -29,11 +31,17 @@
 
 <script>
 const _ = require('lodash');
+const PADDING = 5;
 export default {
   props: {
     x: { type: Number, default: 0 },
     y: { type: Number, default: 0 },
     words: { type: Array, required: true },
+  },
+  data: function() {
+    return {
+      PADDING: PADDING
+    }
   },
   computed: {
     translate: function() {
@@ -48,7 +56,10 @@ export default {
 
         r.text = w.text;
         r.x = cx;
-        r.width = r.text.length * 10 + 20;
+        r.width = r.text.length * 11 + PADDING * 2;
+        if(w.width) {
+          r.width = w.width;
+        }
 
         r.bold = w.bold;
         res.push(r);
@@ -58,7 +69,7 @@ export default {
       return res;
     },
     lines: function() {
-      return _.take(this.wwrods, this.wwrods.length - 2);
+      return _.take(this.wwrods, this.wwrods.length - 1);
     },
     width: function() {
       var w = this.wwrods[this.wwrods.length - 1];
@@ -72,7 +83,7 @@ export default {
 <style lang='scss' scoped>
 text {
   font-size: 18px;
-  text-anchor: middle;
+  text-anchor: left;
 }
 .separator {
   stroke-width: 0.5;

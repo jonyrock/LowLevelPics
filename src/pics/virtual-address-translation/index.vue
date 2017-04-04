@@ -32,7 +32,7 @@
     <pointers />
 
     <boxedWords
-      :x="100" :y="100"
+      :x="240" :y="600"
       :words="addressWords"
     />
 
@@ -85,7 +85,7 @@ export default {
     },
     addressWords: function() {
       return [
-        { text: 'some' },
+        { text: 'some', width: 100 },
         { text: 'text' },
         { text: 'bro' }
       ];
