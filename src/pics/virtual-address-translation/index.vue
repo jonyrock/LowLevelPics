@@ -31,11 +31,16 @@
 
     <pointers />
 
-    <boxedWords
-      :x="240" :y="600"
-      :words="addressWords"
-    />
-
+    <g transform="translate(240,600)">
+      <boxedWords
+        :x="0" :y="0"
+        :words="addressWords"
+      />
+      <emptyTableItem
+        :x="0.5" :y="0.5"
+        :width="59.5" :height="27"
+      />
+    </g>
 
     <g id="shift-names">
       <sn :x="163" :y="116" name="A" />
@@ -58,7 +63,8 @@ export default {
     bt: require('./blockTitle'),
     memory: require('./memory'),
     pointers: require('./pointers'),
-    sn: require('./shift-name')
+    sn: require('./shift-name'),
+    emptyTableItem: require('./emptyTableItem')
   },
   computed: {
     lis: function() {
@@ -85,9 +91,12 @@ export default {
     },
     addressWords: function() {
       return [
-        { text: 'some', width: 100 },
-        { text: 'text' },
-        { text: 'bro' }
+        { text: '', width: 60 },
+        { text: 'A', width: 60, },
+        { text: 'B', width: 60, },
+        { text: 'C', width: 60, },
+        { text: 'D', width: 60, },
+        { text: 'E', width: 60, },
       ];
     }
   },

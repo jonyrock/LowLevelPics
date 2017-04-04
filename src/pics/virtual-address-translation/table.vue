@@ -1,7 +1,6 @@
 <template>
   <g :transform="`translate(${x}, ${y})`">
 
-
     <line
       v-for="col in ccols"
       x1="0" :x2="width"
@@ -24,13 +23,13 @@
       :corner="true"
       orientation="rr"
     />
+
     <rect
       x="0" y="0"
       :width="width"
       :height="height"
       fill="none"
     />
-
 
   </g>
 

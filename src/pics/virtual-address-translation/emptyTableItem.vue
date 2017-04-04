@@ -4,7 +4,7 @@
   y="1"
   fill="url(#crosshatch)"
   :width="width3"
-  height="31"
+  :height="height3"
   transform="scale(0.3)"
   stroke-width="0"
 ></rect>
@@ -22,11 +22,15 @@ export default {
       type: Number,
       required: true,
     },
-    width: { type: Number, default: 100 }
+    width: { type: Number, default: 100 },
+    height: { type: Number, default: 9 }
   },
   computed: {
     width3: function() {
       return this.width * 3.3
+    },
+    height3: function() {
+      return this.height * 3.3
     }
   }
 }

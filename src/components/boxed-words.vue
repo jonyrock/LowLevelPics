@@ -11,8 +11,8 @@
 
     <text
       v-for="w in wwrods"
-      text-anchor="left"
-      :x="w.x + PADDING"
+      :text-anchor="w.textAnchor"
+      :x="w.tx"
       :y="20"
     >
       {{ w.text }}
@@ -31,7 +31,6 @@
 
 <script>
 const _ = require('lodash');
-const PADDING = 5;
 export default {
   props: {
     x: { type: Number, default: 0 },
@@ -40,7 +39,6 @@ export default {
   },
   data: function() {
     return {
-      PADDING: PADDING
     }
   },
   computed: {
@@ -56,10 +54,12 @@ export default {
 
         r.text = w.text;
         r.x = cx;
-        r.width = r.text.length * 11 + PADDING * 2;
+        r.width = r.text.length * 11;
         if(w.width) {
           r.width = w.width;
         }
+        r.textAnchor = 'middle';
+        r.tx = r.x + r.width / 2;
 
         r.bold = w.bold;
         res.push(r);
@@ -83,7 +83,6 @@ export default {
 <style lang='scss' scoped>
 text {
   font-size: 18px;
-  text-anchor: left;
 }
 .separator {
   stroke-width: 0.5;
