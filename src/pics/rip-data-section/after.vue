@@ -54,9 +54,6 @@
         :isDashed="false"
       />
 
-
-
-
     </g>
   </svg>
 </template>
