@@ -5,17 +5,17 @@
       :height="65" :width="165"
       >
 {{ cd }}
-  call resolve
+  call PLT[foo]
 {{ cd }}
     </namedCode>
 
     <namedCode name=".text (lib)"
-      :x="250" :y="0"
+      :x="225" :y="0"
       :height="85" :width="165"
       >
 {{ cd }}
 foo:
-  mov mx, rbx
+  mov rax, rbx
 {{ cd }}
     </namedCode>
 
@@ -28,13 +28,13 @@ foo:
 {{ cd }}
   jmp foo@Got
   prepare solving
-  jpm
+  jpm PLT[0]
 {{ cd }}
     </namedCode>
 
     <namedBlock
       name="GOT"
-      :x="250" :y="125"
+      :x="225" :y="125"
 
       :height="145" :width="165"
     >
@@ -43,7 +43,7 @@ foo:
         :x="0" :y="0"
         :cols="13"
         :width="165"
-        filled="3"
+        filled="2"
       />
       </g>
     </namedBlock>

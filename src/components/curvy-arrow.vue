@@ -1,19 +1,23 @@
 <template>
   <g>
     <defs>
-      <marker id="carrow-end-r" markerWidth="10"
-        markerHeight="10"
-        refX="0"
+      <marker
+        id="carrow-end-r"
+        markerWidth="20"
+        markerHeight="20"
+        refX="10"
         refY="4"
         orient="auto"
         markerUnits="strokeWidth"
       >
-      <g transform="translate(8,0) scale(-1,1)">
-        <arrowEndPath />
-      </g>
+        <g transform="scale(-1,1) translate(-10,0)">
+          <arrowEndPath />
+        </g>
       </marker>
 
-      <marker id="carrow-end-l" markerWidth="10"
+      <marker
+        id="carrow-end-l"
+        markerWidth="10"
         markerHeight="10"
         refX="0"
         refY="4"
@@ -73,6 +77,14 @@ export default {
     corner: {
       type: Boolean,
       default: false
+    },
+    l: {
+      type: Number,
+      default: -1
+    },
+    s: {
+      type: Number,
+      default: -1
     }
   },
   computed: {
@@ -132,21 +144,32 @@ export default {
 function middleOrientationPoints() {
 
   var l = 12 * this.strokeWidth;
-  var s = 2 * this.strokeWidth;
+  if(this.l !== -1) {
+    l = this.l;
+  }
+  var s = 3 * this.strokeWidth;
+  if(this.s !== -1) {
+    s = this.s;
+  }
   if(this.corner) {
     s = 0;
     //l /= 1.5;
   }
   var m = {
-    'rl': [[l, -s], [-l, s]],
+    'lr': [[-l, s], [l, -s]],
+    'll': [[-l, -s], [-l, s]],
     'tr': [[-s, -l], [l, s]],
+    'tl': [[s, -l], [-l, s]],
     'rr': [[l, -s], [l, s]],
+    'rl': [[l, -s], [-l, s]],
   }
   var sm = m[this.orientation];
-  if(this.orientation == 'rl' && this.y1 < this.y2) {
+  if(
+    (this.orientation == 'rl' || this.orientation == 'lr') &&
+    this.y1 < this.y2
+  ) {
     sm[0][1] = s; sm[1][1] = -s;
   }
-
 
   if(!sm) {
     throw new Error('Can`t find orientation')

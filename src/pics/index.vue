@@ -43,7 +43,7 @@ export default {
     p5: require('./compilation-pipeline/index'),
     p6: require('./forth-machine/index'),
     p7: require('./virtual-address-translation/index'),
-    p8: require('./rip-data-section/index'),
+    p8: require('./rip-data-section/before'),
   }
 }
 
