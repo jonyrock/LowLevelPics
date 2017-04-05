@@ -26,6 +26,8 @@
 
   <picHolder picName="Inderect threated code"><p9/></picHolder>
 
+  <picHolder picName="GOT global variable"><p10/></picHolder>
+
   <div style="height: 400px"></div>
 
 </div>
@@ -50,6 +52,7 @@ export default {
     p8_1: require('./rip-data-section/before'),
     p8_2: require('./rip-data-section/after'),
     p9: require('./indirect-threaded-code/index'),
+    p10: require('./got-global-variable/index'),
   }
 }
 
